@@ -68,8 +68,8 @@
 			<a href="/KHdaangn/hot_articles">인기매물 더 보기</a>
 		</div>
 		<div>
-			<a href="/KHdaangn/top_keywords">중고거래 인기검색어</a>
 			<!-- 인기검색어 -->
+			<a href="/KHdaangn/top_keywords">중고거래 인기검색어</a>
 		</div>
 	</div>	
 	<!-- //Main -->
