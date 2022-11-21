@@ -1,4 +1,4 @@
-package com.KHdaangn.web;
+package com.KHdaangn.web.jobs.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -12,44 +12,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class HomeController {
+public class JobsController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(JobsController.class);
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("index", locale);
+	// 인기 당근알바 조회 페이지
+	@RequestMapping(value = "/jobs", method = RequestMethod.GET)
+	public String jobs(Locale locale, Model model) {
+		logger.info("jobs", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		String formattedDate = dateFormat.format(date);
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "index";
+		return "jobs/jobs";
 	}
 	
-	@RequestMapping(value = "/story_articles", method = RequestMethod.GET)
-	public String story_articles(Locale locale, Model model) {
-		logger.info("story_articles", locale);
+	// 알바 게시물 페이지
+	@RequestMapping(value = "/job-posts", method = RequestMethod.GET)
+	public String jobPosts(Locale locale, Model model) {
+		logger.info("job-posts", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		String formattedDate = dateFormat.format(date);
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "story_articles";
+		return "jobs/job-posts";
 	}
 	
-	@RequestMapping(value = "/top_keywords", method = RequestMethod.GET)
-	public String top_keywords(Locale locale, Model model) {
-		logger.info("top_keywords", locale);
+	// 알바 게시물 추가 페이지
+	@RequestMapping(value = "/jobs/add", method = RequestMethod.GET)
+	public String jobAdd(Locale locale, Model model) {
+		logger.info("jobAdd", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		String formattedDate = dateFormat.format(date);
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "top_keywords";
+		return "jobs/add";
 	}
 	
 }

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/* reset */
+body {
+	font: normal 14px 'NanumSquare', Arial, sans-serif;
+	font-weight: 400; /* Regular(400), Bold(700), Extra Bold(800), Light(300) */
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, 
+address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
+
+/* header */
+.nav{display: flex; max-width: 1600px; margin: 10px auto; text-align: center;}
+.nav .nav-logo > a {width: 115px; height: 38px; display: flex; align-items: center;}
+.nav .nav-logo a > img {width: 38px; height: 38px; display: block;}
+.nav .nav-main {width: 600px;}
+.nav .nav-main > ul {margin: 10px; display: flex; list-style: none;}
+.nav .nav-main > li {display: list-item;}
+.nav .nav-main li > a {margin-right: 15px;}
+.nav .nav-serch-bar {width: 450px;}
+.nav .nav-btn {width: 135px;}
+
+/* footer */
+.footer-wrap {border-top: 1px solid; border-color: #eaebee; max-width: 1600px; text-align: center; line-height: 1.7;}
+.footer-wrap .footer-section {display: flex; margin: 0 auto; padding: 50px 0; justify-content: center;}
+.footer-wrap .footer-section .footer-section-left {width: 25%;}
+.footer-wrap .footer-section .footer-section-left > ul {width: 33%; float: left; display: flex; flex-direction: column; list-style: none;}
+.footer-wrap .footer-section .footer-section-left > li {margin: 10px;}
+.footer-wrap .footer-section .footer-section-right {width: 33%;}
+.footer-wrap .footer-info {border-top: 1px solid; border-color: #eaebee; max-width: 1600px; padding: 50px 0;}
+
+.footer-info .footer-info-right {display: flex; justify-content: center;}
+.footer-info .footer-select {margin-left: 10px;}
+
+/* main */
+.main-wrap {align-items: center;}
+.main-wrap .main-content:first-child {padding-top: 24px; background-color: #FBF7F2;}
+.main-wrap .main-content {padding: 6rem 0;}
+.main-wrap .main-content:nth-child(3) {padding: 6rem 0; background-color: #E6F3E6;}
+
+.main-wrap .main-jobs {background-color: #ff6f0f;}
+
+
+@media screen and (min-width: 768px) {
+	.post-wrap {margin: 0 auto;}
+	
+}
+ 
+/* posts */
+.posts {display:flex; justify-content: space-between;}
+.posts .posts-img > img {display: block; width: 80px; height: 80px; float: left; }
+
+.main-wrap .add-h3 {float:left;}
+.main-wrap .choice-gray {color: gray;}
+.main-wrap .add-gray {color: gray;}
+
