@@ -16,6 +16,13 @@
 		
 	<!-- Main -->
 	<div class="main-wrap">
+		<div class="main-top">
+			<div class="main-text">
+				<h1>복비없이 투명한<br>부동산 직거래<br></h1>
+				<p>이웃이 살던 집, 당근마켓에서<br>편하게 직거래해보세요.</p>
+			</div>
+		</div>
+	
 		<div class="post-wrap">
 			<h2 class="">인기 부동산 직거래 게시물</h2>
 			<c:if test="${empty sessionScope.loginData}">
