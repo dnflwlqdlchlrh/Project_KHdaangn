@@ -37,11 +37,21 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 
 /* main */
 .main-wrap {align-items: center;}
-.main-wrap .main-content:first-child {padding-top: 24px; background-color: #FBF7F2;}
+.main-wrap .main-content:first-child {display: flex; padding-top: 24px; background-color: #FBF7F2;}
 .main-wrap .main-content {padding: 6rem 0;}
 .main-wrap .main-content:nth-child(3) {padding: 6rem 0; background-color: #E6F3E6;}
+.main-wrap .main-content:last-child {padding: 6rem 0; background-color: #E6F3E6;}
 
-.main-wrap .main-jobs {background-color: #ff6f0f;}
+.main-content .text-section {margin: 150px 0;}
+.main-content .main-title {width: 350px; font-weight: 900; font-size: 40px;}
+.main-content .img-section {width: 40%;}
+.main-content .main-img > img {width: 100%; height: 100%;}
+}
+
+.main-wrap .second-content {background-color: #F8F9FA}
+.main-wrap .third-content {margin: 40px auto; }
+
+.main-wrap .main-jobs {text-align: center; background-color: #ff6f0f;}
 
 
 @media screen and (min-width: 768px) {
