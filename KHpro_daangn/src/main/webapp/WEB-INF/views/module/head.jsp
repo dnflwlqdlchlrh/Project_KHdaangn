@@ -20,6 +20,7 @@
 <c:url var="login" value="/login" />
 <c:url var="logout" value="/logout" />
 <c:url var="search" value="/search" />
+<c:url var="trust" value="/trust" />
 <c:url var="articles" value="/articles" />
 <c:url var="hotArticles" value="/hot_articles" />
 <c:url var="topKeywords" value="/top_keywords" />

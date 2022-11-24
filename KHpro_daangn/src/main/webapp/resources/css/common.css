@@ -9,19 +9,22 @@ body {
 	margin: 0;
 	padding: 0;
 }
+html{font-size: 62.5%;}
 h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, 
 address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 
 /* header */
-.nav{display: flex; max-width: 1600px; margin: 10px auto; text-align: center;}
+.header-wrap {width: 100%;}
+.nav{display: flex; justify-content: center; width: 100%; margin: 10px auto; text-align: center;}
 .nav .nav-logo > a {width: 115px; height: 38px; display: flex; align-items: center;}
 .nav .nav-logo a > img {width: 38px; height: 38px; display: block;}
 .nav .nav-main {width: 600px;}
 .nav .nav-main > ul {margin: 10px; display: flex; list-style: none;}
 .nav .nav-main > li {display: list-item;}
 .nav .nav-main li > a {margin-right: 15px;}
-.nav .nav-serch-bar {width: 450px;}
-.nav .nav-btn {width: 135px;}
+.nav .search-bar {display: flex;}
+.nav .search-bar > input {width: 30rem;}
+.nav .nav-btn {width: 135px; display: flex;}
 
 /* footer */
 .footer-wrap {border-top: 1px solid; border-color: #eaebee; max-width: 1600px; text-align: center; line-height: 1.7;}
@@ -35,21 +38,21 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .footer-info .footer-info-right {display: flex; justify-content: center;}
 .footer-info .footer-select {margin-left: 10px;}
 
-/* main */
+/* index */
 .main-wrap {align-items: center;}
 .main-wrap .main-content:first-child {display: flex; padding-top: 24px; background-color: #FBF7F2;}
-.main-wrap .main-content {padding: 6rem 0;}
-.main-wrap .main-content:nth-child(3) {padding: 6rem 0; background-color: #E6F3E6;}
-.main-wrap .main-content:last-child {padding: 6rem 0; background-color: #E6F3E6;}
+.main-wrap .main-content:nth-child(2) {display: flex; padding: 6rem 0;}
+.main-wrap .main-content:nth-child(3) {display: flex; padding: 6rem 0; background-color: #E6F3E6;}
+.main-wrap .main-content:nth-child(4) {display: flex; padding: 6rem 0;}
 
 .main-content .text-section {margin: 150px 0;}
 .main-content .main-title {width: 350px; font-weight: 900; font-size: 40px;}
 .main-content .img-section {width: 40%;}
 .main-content .main-img > img {width: 100%; height: 100%;}
-}
 
-.main-wrap .second-content {background-color: #F8F9FA}
-.main-wrap .third-content {margin: 40px auto; }
+.main-wrap .second-content {background-color: #F8F9FA; text-align: center;}
+.main-wrap .third-content {display: flex; justify-content: center; margin: 40px auto; text-align: center;}
+.main-wrap .third-content > ul {display: flex; margin: 0 3rem; text-align: center; list-style: none;}
 
 .main-wrap .main-jobs {text-align: center; background-color: #ff6f0f;}
 
