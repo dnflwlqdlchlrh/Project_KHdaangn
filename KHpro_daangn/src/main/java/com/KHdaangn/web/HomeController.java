@@ -52,4 +52,16 @@ public class HomeController {
 		return "top_keywords";
 	}
 	
+	@RequestMapping(value = "/trust", method = RequestMethod.GET)
+	public String trust(Locale locale, Model model) {
+		logger.info("trust", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		String formattedDate = dateFormat.format(date);
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "trust";
+	}
+	
 }
