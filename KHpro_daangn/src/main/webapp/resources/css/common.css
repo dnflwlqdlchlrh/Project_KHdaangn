@@ -14,8 +14,8 @@ h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquo
 address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 
 /* header */
-.header-wrap {width: 100%;}
-.nav{display: flex; justify-content: center; width: 100%; margin: 10px auto; text-align: center;}
+.header-wrap {width: 100%; position: fixed; top: 0; z-index: 999; background-color: #FFFFFF}
+.nav{display: flex; justify-content: center; width: 100%; margin: 1rem auto; padding: 0.6rem; text-align: center;}
 .nav .nav-logo > a {width: 115px; height: 38px; display: flex; align-items: center;}
 .nav .nav-logo a > img {width: 38px; height: 38px; display: block;}
 .nav .nav-main {width: 600px;}
@@ -39,8 +39,8 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .footer-info .footer-select {margin-left: 10px;}
 
 /* index */
-.main-wrap {align-items: center;}
-.main-wrap .main-content:first-child {display: flex; padding-top: 24px; background-color: #FBF7F2;}
+.main-wrap {margin-top: 7.3rem; align-items: center;}
+.main-wrap .main-content:first-child {position: relative; display: flex; padding-top: 24px; background-color: #FBF7F2;}
 .main-wrap .main-content:nth-child(2) {display: flex; padding: 6rem 0;}
 .main-wrap .main-content:nth-child(3) {display: flex; padding: 6rem 0; background-color: #E6F3E6;}
 .main-wrap .main-content:nth-child(4) {display: flex; padding: 6rem 0;}
