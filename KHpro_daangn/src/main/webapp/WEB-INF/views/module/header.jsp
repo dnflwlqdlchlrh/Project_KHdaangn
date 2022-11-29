@@ -3,19 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<script type="text/javascript">
-	function enterkey() {
-	    if (window.event.keyCode == 13) {
-	         // 엔터키가 눌렸을 때 실행할 내용
-	         // 검색 기능 구현 전 임시
-	         location.href= "search/"
-	         
-	         // 검색 기능 구현 후 활성화
-	         //let value = document.getElementById('search').value;
-	         //location.href= "search/" + value;
-	    }
-	}
-</script>
 <div class="header-wrap">
 		<div class="nav">
 			<div class="nav-logo">
