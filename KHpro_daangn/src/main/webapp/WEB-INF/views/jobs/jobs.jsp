@@ -16,10 +16,15 @@
 		
 	<!-- Main -->
 	<div class="main-wrap">
-		<div class="main-top">
-			<div class="main-text">
-				<h1>우리 동네에서 찾는<br>당근알바<br></h1>
-				<p>걸어서 10분 거리의<br>동네 알바들 여기 다 있어요.</p>
+		<div class="main-top-wrap">
+			<div class="main-top">
+				<div class="main-text">
+					<h1>우리 동네에서 찾는<br>당근알바<br></h1>
+					<p>걸어서 10분 거리의<br>동네 알바들 여기 다 있어요.</p>
+				</div>
+				<div class="main-img">
+					<img src="${img}/jobs-img.png">
+				</div>
 			</div>
 		</div>
 		

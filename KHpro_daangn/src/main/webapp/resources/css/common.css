@@ -59,11 +59,6 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .main-jobs {text-align: center; background-color: #ff6f0f;}
 
 
-@media screen and (min-width: 768px) {
-	.post-wrap {margin: 0 auto;}
-	
-}
-
 /* hot_articles */
 .main-wrap .article-top {width: 980px; margin: 1rem auto; display: flex; justify-content: space-between; align-items: center;}
 .main-wrap .selector {float: right; display: flex;}
@@ -73,6 +68,15 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .article-click .article-img {width: 100%; border-radius: 12px;}
 
 .article-bottom {padding: 80px 0; text-align: center; background-color: #f8f9fa;} 
+ 
+ 
+ /* jobs & realty */
+ .main-wrap .main-top {display: flex; background: #ffe2d2;}
+ .main-wrap .main-top .main-text {width: 980px; margin: 0 auto; padding: 3rem 1rem 0;}
+ .main-wrap .main-top .main-text > h1 {}
+ .main-wrap .main-top .main-text > p {}
+ .main-wrap .main-top .main-img > img {width: 200px;}
+ 
  
  
 /* posts */
