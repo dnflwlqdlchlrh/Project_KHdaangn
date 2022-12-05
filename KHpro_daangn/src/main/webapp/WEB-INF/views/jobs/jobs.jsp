@@ -29,14 +29,16 @@
 		</div>
 		
 		<div class="post-wrap">
-			<h2 class="">인기 당근알바</h2>
-			<c:if test="${empty sessionScope.loginData}">
-			<!-- 로그인 구현 후 not empty 로 변경 하시오. -->
-			<%--c:if test="${not empty sessionScope.loginData}" --%>
-				<div class="post-btn">
-					<button class="" onclick="location.href='${jobAddUrl}'">글쓰기</button>
-				</div>
-			</c:if>
+			<div class="post-top-wrap">
+				<h2 class="">인기 당근알바</h2>
+				<c:if test="${empty sessionScope.loginData}">
+				<!-- 로그인 구현 후 not empty 로 변경 하시오. -->
+				<%--c:if test="${not empty sessionScope.loginData}" --%>
+					<div class="post-btn">
+						<button class="" onclick="location.href='${jobAddUrl}'">글쓰기</button>
+					</div>
+				</c:if>
+			</div>
 			
 			<c:forEach items="${jobsList}" var="jobsList">
 			<!-- 게시물 갯수 제한 구현해야함 -->
@@ -57,15 +59,15 @@
 				</div>
 			</c:forEach>
 			
-			<div class="karrot-app">
-				<div class="" onclick="">
-					<div class="app-left">
-						이웃의 일손을 빠르게<br>당근알바에서 바로 찾아보세요!<br>
-						<a>앱 다운로드 하기></a>
-					</div>
-					<div class="app-right">
-						<img alt="토끼" src="">
-					</div>
+			<div class="karrot-app" onclick="location.href=''">
+				<div class="app-left">
+					<img src="${img}/jobs_banner.png">
+				</div>
+				<div class="app-mid">
+					우리동네 알바가 궁금하다면<br>당근마켓에서 바로 찾아보세요!<br>
+				</div>
+				<div class="app-right">
+					앱 다운로드 하기
 				</div>
 			</div>
 			

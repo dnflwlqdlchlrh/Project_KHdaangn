@@ -21,11 +21,11 @@
 			<div class="nav-btn">
 				<c:if test="${empty sessionScope.loginData}">
 					<button class="btn-chat" onclick="location.href='${join}'">회원가입</button>
-					<button class="btn-loging" onclick="location.href='${login}'">로그인</button>
+					<button class="btn-login" onclick="location.href='${login}'">로그인</button>
 				</c:if>
 				<c:if test="${not empty sessionScope.loginData}">
 					<button class="btn-chat" onclick="location.href='${chat}'">채팅하기</button>
-					<button class="btn-loging" onclick="location.href='${logout}'">로그아웃</button>
+					<button class="btn-login" onclick="location.href='${logout}'">로그아웃</button>
 				</c:if>
 			</div>
 		</div>
