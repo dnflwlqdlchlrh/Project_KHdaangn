@@ -46,7 +46,7 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .footer-info .footer-select {margin-left: 10px;}
 
 /* index */
-.main-wrap {margin: 7.3rem auto 0; align-items: center;}
+.main-wrap {margin: 10rem auto 0; align-items: center;}
 .main-wrap .main-title {width: 980px; margin: 0 auto;}
 .main-wrap .main-title > h1 {font-size: 34px; font-weight: 800; text-align: center; margin-bottom: 40px;}
 .main-wrap .main-content:first-child {position: relative; display: flex; padding-top: 24px; background-color: #FBF7F2;}
@@ -71,8 +71,8 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .selector {float: right; display: flex;}
 
 .article-wrap .article-posts {width: 980px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
-.article-posts .post {width: calc(25% - 44px); margin-right: 44px; margin-bottom: 56px; cursor: pointer;}
-.article-click .article-img {width: 100%; border-radius: 12px;}
+.article-wrap .article-posts .post {width: calc(25% - 44px); margin-right: 44px; margin-bottom: 56px; cursor: pointer;}
+.article-wrap .article-posts .post .article-click .article-img {width: 100%; border-radius: 12px;}
 
 .article-bottom {padding: 80px 0; text-align: center; background-color: #f8f9fa;} 
  
@@ -89,12 +89,15 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .post-wrap .post-top-wrap {display: flex; align-items: center;}
 .main-wrap .post-wrap .post-top-wrap > h2 {font-size: 2.8rem; margin: 3.75rem 54rem 2.5rem 0;}
 
-
+.post-wrap .posts {width: 980px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.post-wrap .posts .post {width: calc(25% - 44px); margin-right: 44px; margin-bottom: 56px; cursor: pointer;}
+.post-wrap .posts .post .post-click .post-img {width: 100%; border-radius: 12px;}
 
 .karrot-app {cursor: pointer; width: 770px; margin: 0 auto; display: flex; align-items: center; border-radius: 10px; background-color: #ff6f0f24}
 .karrot-app .app-left > img {width: 5.5rem; margin: 0 4rem;}
 .karrot-app .app-mid {margin: 3rem 24rem 3rem 0; font-size: 2rem; font-weight: 700;}
 .karrot-app .app-right {padding: 1rem 1rem; margin-right: 1rem; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 10px; background-color: #ff6f0f;}
+
  
 /* posts */
 .posts {display:flex; justify-content: space-between;}

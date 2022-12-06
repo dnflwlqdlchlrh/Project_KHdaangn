@@ -35,7 +35,7 @@
 				<!-- 로그인 구현 후 not empty 로 변경 하시오. -->
 				<%--c:if test="${not empty sessionScope.loginData}" --%>
 					<div class="post-btn">
-						<button class="" onclick="location.href='${jobAddUrl}'">글쓰기</button>
+						<button onclick="location.href='${jobAddUrl}'">글쓰기</button>
 					</div>
 				</c:if>
 			</div>
@@ -71,52 +71,74 @@
 				</div>
 			</div>
 			
-			<c:forEach items="${jobsList}" var="jobsList">
+			<!-- forEach jobsList 구현후 삭제 -->
+			<div class="posts">
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
-						<!-- Post (클릭되는 부분) -->
-						<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobsList.title}'">
-							<img class="post-img" src="${pageContext.request.contextPath}${jobsList.imgObj.url}/${jobPostsList.imgObj.uuidName}">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
 							<div class="post-content">
-								<div class="post-title"><c:out value="${jobsList.title}"/></div>
-								<div class="post-id"><c:out value="${jobsList.id}"/></div>
-								<div class="post-address"><c:out value="${jobsList.address}"/></div>
-								<div class="post-amount"><c:out value="${jobsList.amount}"/></div>
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
 							</div>
 						</div>
-						<!-- //Post -->
 					</form>
 				</div>
-			</c:forEach>
-			
-			<!-- forEach jobsList 구현후 삭제 -->
-			<c:url var="jobPostsUrl" value="/job-posts" />
-			<form action="${jobPostsUrl}" method="get">
 				<div class="post">
-					<div class="post-click" onclick="location.href='${jobPostsUrl}'">
-						<div class="post-img"><img src="resources/img/job-post-img.jpg"></div>
-						<div class="post-content">
-							<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
-							<div class="post-id">콜센터</div>
-							<div class="post-address">경기도 부천시 상동</div>
-							<div class="post-amount">월급 1,500,000</div>
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
 						</div>
-					</div>
+					</form>
 				</div>
-				<div class="posts">
-				<a href="/KHdaangn/job-posts" class="">
-					<article>
-						<div class="posts-img"><img alt="" src="resources/img/job-post-img.jpg"></div>
-						<div class="posts-content">
-							<div class="posts-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
-							<div class="posts-id">콜센터</div>
-							<div class="posts-address">경기도 부천시 상동</div>
-							<div class="posts-amount">월급 1,500,000</div>
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
 						</div>
-					</article>
-					</a>
+					</form>
 				</div>
-			</form>
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 			<!-- //forEach jobsList 구현후 삭제 -->
 		</div>
 	</div>
