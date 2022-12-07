@@ -16,7 +16,7 @@
 		
 	<!-- Main -->
 	<div class="main-wrap">
-		<div class="main-title"><h1>중고거래 인기매물</h1></div>
+		<div class="main-top"><h1>중고거래 인기매물</h1></div>
 		
 		<div class="article-top">
 			<c:if test="${empty sessionScope.loginData}">
