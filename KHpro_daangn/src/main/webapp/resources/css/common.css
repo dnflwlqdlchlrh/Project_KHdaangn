@@ -89,8 +89,9 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .post-wrap .post-top-wrap {display: flex; align-items: center;}
 .main-wrap .post-wrap .post-top-wrap > h2 {font-size: 2.8rem; margin: 3.75rem 54rem 2.5rem 0;}
 
-.post-wrap .posts {width: 980px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
-.post-wrap .posts .post {width: calc(25% - 44px); margin-right: 44px; margin-bottom: 56px; cursor: pointer;}
+.post-wrap .posts {width: 780px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.post-wrap .posts .post {width: calc(25% - 44px); margin-right: 220px; margin-bottom: 56px; cursor: pointer;}
+.post-wrap .posts .post .post-click {display: flex;}
 .post-wrap .posts .post .post-click .post-img {width: 100%; border-radius: 12px;}
 
 .karrot-app {cursor: pointer; width: 770px; margin: 0 auto; display: flex; align-items: center; border-radius: 10px; background-color: #ff6f0f24}
@@ -100,7 +101,6 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 
  
 /* posts */
-.posts {display:flex; justify-content: space-between;}
 .posts .posts-img > img {display: block; width: 80px; height: 80px; float: left; }
 .post-btn {float:right; margin-top: 2.2rem;}
 .post-btn > button {cursor: pointer; padding: 0.7rem 1rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff6f0f;}

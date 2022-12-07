@@ -59,6 +59,64 @@
 				</div>
 			</c:forEach>
 			
+			<!-- forEach jobsList 구현후 삭제 -->
+			<div class="posts">
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="post">
+					<form action="${jobPostsUrl}" method="get">
+						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
+							<img class="post-img" src="${img}/job-post-img.jpg">
+							<div class="post-content">
+								<div class="post-title">전화업무(아웃바운드) 10시-4시까지 구합니다</div>
+								<div class="post-id">콜센터</div>
+								<div class="post-address">경기도 부천시 상동</div>
+								<div class="post-amount">월급 1,500,000</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- //forEach jobsList 구현후 삭제 -->
+			
+			
 			<div class="karrot-app" onclick="location.href=''">
 				<div class="app-left">
 					<img src="${img}/jobs_banner.png">
@@ -72,7 +130,7 @@
 			</div>
 			
 			<!-- forEach jobsList 구현후 삭제 -->
-			<div class="posts">
+			<div class="posts" style="margin: 5rem auto 0;">
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
 						<div class="post-click" onclick="location.href='${jobPostsUrl}'">
