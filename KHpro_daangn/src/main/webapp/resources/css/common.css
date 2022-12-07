@@ -43,16 +43,19 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .footer-wrap .footer-section .footer-section-left > ul {width: 33%; float: left; display: flex; flex-direction: column; list-style: none;}
 .footer-wrap .footer-section .footer-section-left > ul:last-child {margin-right: 15%;}
 .footer-wrap .footer-section .footer-section-left > li {margin: 10px;}
-.footer-wrap .footer-section .footer-section-right {}
-.footer-wrap .footer-section .footer-section-right a:before {content: "O";}
-.footer-wrap .footer-section .footer-section-right a {padding: 1.2rem 1.7rem; font-size: 1.5rem; font-weight: 800; border: #f2f3f6; border-radius: 6px; background-color: #f2f3f6;}
-.footer-wrap .footer-info {width: 780px; margin: 0 auto; padding: 3rem 0; display: flex; justify-content: space-between; border-top: 1px solid; border-color: #eaebee;}
+.footer-wrap .footer-section .footer-section-right > h4 {margin-bottom: 1rem;}
+.footer-wrap .footer-section .footer-section-right a {margin-right: 0.6rem; padding: 1.2rem 1.7rem; font-size: 1.5rem; font-weight: 800; border: #f2f3f6; border-radius: 6px; background-color: #f2f3f6;}
 
-.footer-wrap .footer-info .footer-info-right {display: flex; justify-content: center;}
-.footer-wrap .footer-info .footer-select {margin-left: 10px;}
+.footer-wrap .footer-info {width: 780px; margin: 0 auto; padding: 3rem 0; display: flex; justify-content: space-between; border-top: 1px solid; border-color: #eaebee;}
+.footer-wrap .footer-info .footer-info-left {width: 50%;}
+.footer-wrap .footer-info .footer-info-left > h4 {margin-right: 0.3rem; float: left;}
+.footer-wrap .footer-info .footer-info-right {width: 40%; display: flex; justify-content: center;}
+.footer-wrap .footer-info .footer-info-right .footer-a > a {margin-right: 1rem;}
+
+.footer-wrap .footer-info .footer-select {margin-left: 0.3rem;}
 
 /* index */
-.main-wrap {margin: 10rem auto 0; align-items: center;}
+.main-wrap {margin: 8.8rem auto 0; align-items: center;}
 .main-wrap .main-title {width: 980px; margin: 0 auto;}
 .main-wrap .main-title > h1 {font-size: 34px; font-weight: 800; text-align: center; margin-bottom: 40px;}
 .main-wrap .main-content:first-child {position: relative; display: flex; padding-top: 24px; background-color: #FBF7F2;}

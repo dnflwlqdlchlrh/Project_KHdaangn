@@ -22,8 +22,8 @@
 			</ul>
 		</div>
 		<div class="footer-section-right">
-			<div class="">당근마켓 앱 다운로드</div>
-			<div class="">
+			<h4>당근마켓 앱 다운로드</h4>
+			<div>
 				<a href="https://apps.apple.com/kr/app/%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93-%EC%A4%91%EA%B3%A0%EA%B1%B0%EB%9E%98-%ED%95%84%EC%88%98%EC%95%B1/id1018769995">App Store</a>
 				<a href="https://play.google.com/store/apps/details?id=com.towneers.www&hl=ko&pli=1">Google Play</a>
 			</div>
@@ -31,8 +31,8 @@
 	</div>
 	<div class="footer-info">
 		<div class="footer-info-left">
-			프로젝트 참여인원 : 강청하, 노수진, 서중완, 이다은, 허윤<br> 
-			프로젝트 진행기간 : 2022. 11. 08 ~ 2022. 12. 09
+			<h4>프로젝트 참여인원 :</h4><p>강청하, 노수진, 서중완, 이다은, 허윤</p> 
+			<h4>프로젝트 진행기간 :</h4><p>2022. 11. 08 ~ 2022. 12. 09</p>
 		</div>
 		<div class="footer-info-right">
 			<div class="footer-a">
@@ -43,7 +43,7 @@
 			</div>
 			<div class="footer-select">
 				<select id="label-select-nation" class="">
-					<option value="kr" selected>한국어</option>
+					<option value="kr" selected>한국</option>
 					<option value="none">none</option>
 					<option value="none">none</option>
 					<option value="none">none</option>
