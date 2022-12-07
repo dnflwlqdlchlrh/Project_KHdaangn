@@ -38,7 +38,7 @@
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
 						<!-- Post (클릭되는 부분) -->   
-						<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobList.jobBId}'">
+						<div class="post-click" onclick="location.href='${pageContext.request.contextPath}/${jobPostsUrl}/${jobList.jobBId}'">
 						
 						<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
 							<img class="post-img" src="${pageContext.request.contextPath}/${jobList.imgObj.url}/${jobList.imgObj.uuidName}">
