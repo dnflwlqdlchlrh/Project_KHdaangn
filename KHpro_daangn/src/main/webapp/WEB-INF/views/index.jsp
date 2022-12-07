@@ -109,7 +109,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -125,7 +125,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -141,7 +141,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -157,7 +157,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -173,7 +173,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -189,7 +189,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -205,7 +205,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
@@ -221,7 +221,7 @@
 							<!-- Post (클릭되는 부분) -->
 							<div class="article-click" onclick="location.href='${articles}'">
 								<img class="article-img" src="${img}/article-img.JPG">
-								<div class="atticle-content">
+								<div class="article-content">
 									<div class="article-title">삼성 55인치 tv</div>
 									<div class="article-amount">100,000원</div>
 									<div class="article-address">부산 남구 문현제2동</div>
