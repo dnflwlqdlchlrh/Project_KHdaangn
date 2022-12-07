@@ -55,4 +55,17 @@ public class JobsController {
 		return "jobs/add";
 	}
 	
+	// 알바 게시물 수정 페이지
+	@RequestMapping(value = "/jobs/modify", method = RequestMethod.GET)
+	public String jobModify(Locale locale, Model model) {
+		logger.info("jobModify", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		String formattedDate = dateFormat.format(date);
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "jobs/modify";
+	}
+	
 }

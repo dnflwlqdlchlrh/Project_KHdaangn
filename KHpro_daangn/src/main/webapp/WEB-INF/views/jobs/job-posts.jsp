@@ -20,6 +20,13 @@
 		<div class="slide-img">
 			<img alt="" src="resources/img/job-post-img.jpg">
 		</div>
+		<!-- session -> not empty 변경 -->
+		<c:if test="${empty sessionScope.loginData}">
+			<div class="post-btn">
+				<button class="" onclick="location.href='${jobModifyUrl}'">수정</button>
+			</div>
+		</c:if>
+		
 		<div class="id-section">
 			<div class="id-section-left">
 				<div class="id-img"><img src=""></div>
