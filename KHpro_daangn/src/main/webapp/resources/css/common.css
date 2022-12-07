@@ -34,16 +34,22 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .nav .nav-btn .btn-login:hover {color: #212124; background-color: #f2f3f6;}
 
 /* footer */
-.footer-wrap {border-top: 1px solid; border-color: #eaebee; max-width: 1600px; text-align: center; line-height: 1.7;}
-.footer-wrap .footer-section {display: flex; margin: 0 auto; padding: 50px 0; justify-content: center;}
-.footer-wrap .footer-section .footer-section-left {width: 25%;}
+.footer-wrap {width: 780px; margin: 0 auto; border-top: 1px solid; border-color: #eaebee; text-align: left; line-height: 1.7;}
+.footer-wrap a {text-decoration: none; color: black;}
+.footer-wrap a:hover {text-decoration: underline;}
+.footer-wrap ul li {margin: 1rem;}
+.footer-wrap .footer-section {padding: 4rem 0; display: flex;}
+.footer-wrap .footer-section .footer-section-left {width: 60%; display: flex; float: left;}
 .footer-wrap .footer-section .footer-section-left > ul {width: 33%; float: left; display: flex; flex-direction: column; list-style: none;}
+.footer-wrap .footer-section .footer-section-left > ul:last-child {margin-right: 15%;}
 .footer-wrap .footer-section .footer-section-left > li {margin: 10px;}
-.footer-wrap .footer-section .footer-section-right {width: 33%;}
-.footer-wrap .footer-info {border-top: 1px solid; border-color: #eaebee; max-width: 1600px; padding: 50px 0;}
+.footer-wrap .footer-section .footer-section-right {}
+.footer-wrap .footer-section .footer-section-right a:before {content: "O";}
+.footer-wrap .footer-section .footer-section-right a {padding: 1.2rem 1.7rem; font-size: 1.5rem; font-weight: 800; border: #f2f3f6; border-radius: 6px; background-color: #f2f3f6;}
+.footer-wrap .footer-info {width: 780px; margin: 0 auto; padding: 3rem 0; display: flex; justify-content: space-between; border-top: 1px solid; border-color: #eaebee;}
 
-.footer-info .footer-info-right {display: flex; justify-content: center;}
-.footer-info .footer-select {margin-left: 10px;}
+.footer-wrap .footer-info .footer-info-right {display: flex; justify-content: center;}
+.footer-wrap .footer-info .footer-select {margin-left: 10px;}
 
 /* index */
 .main-wrap {margin: 10rem auto 0; align-items: center;}
