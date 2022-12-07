@@ -33,18 +33,20 @@
 				</div>
 			</c:if>
 			
-			<c:forEach items="${jobsList}" var="jobsList">
+			<c:forEach items="${jobList}" var="jobList">
 			<!-- 게시물 갯수 제한 구현해야함 -->
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
-						<!-- Post (클릭되는 부분) -->
-						<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobsList.title}'">
-							<img class="post-img" src="${pageContext.request.contextPath}${jobsList.imgObj.url}/${jobPostsList.imgObj.uuidName}">
+						<!-- Post (클릭되는 부분) -->   
+						<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobList.jobBId}'">
+						
+						<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
+							<img class="post-img" src="${pageContext.request.contextPath}/${jobList.imgObj.url}/${jobList.imgObj.uuidName}">
 							<div class="post-content">
-								<div class="post-title"><c:out value="${jobsList.title}"/></div>
-								<div class="post-id"><c:out value="${jobsList.id}"/></div>
-								<div class="post-address"><c:out value="${jobsList.address}"/></div>
-								<div class="post-amount"><c:out value="${jobsList.amount}"/></div>
+								<div class="post-title"><c:out value="${jobList.detailObj.title}"/></div>
+								<div class="post-companyName"><c:out value="${jobList.detailObj.companyName}"/></div>
+								<div class="post-address"><c:out value="${jobList.detailObj.address}"/></div>
+								<div class="post-pay"><c:out value="${jobList.detailObj.payType}"/><c:out value="${jobList.detailObj.pay}"/></div>
 							</div>
 						</div>
 						<!-- //Post -->
@@ -63,11 +65,11 @@
 					</div>
 				</div>
 			</div>
-			
+			<!-- 
 			<c:forEach items="${jobsList}" var="jobsList">
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
-						<!-- Post (클릭되는 부분) -->
+						 Post (클릭되는 부분) 
 						<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobsList.title}'">
 							<img class="post-img" src="${pageContext.request.contextPath}${jobsList.imgObj.url}/${jobPostsList.imgObj.uuidName}">
 							<div class="post-content">
@@ -77,12 +79,12 @@
 								<div class="post-amount"><c:out value="${jobsList.amount}"/></div>
 							</div>
 						</div>
-						<!-- //Post -->
+						//Post
 					</form>
 				</div>
 			</c:forEach>
-			
-			<!-- forEach jobsList 구현후 삭제 -->
+			 -->
+			<!-- forEach jobsList 구현후 삭제 
 			<c:url var="jobPostsUrl" value="/job-posts" />
 			<form action="${jobPostsUrl}" method="get">
 				<div class="post">
