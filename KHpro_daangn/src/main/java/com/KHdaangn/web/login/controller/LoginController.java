@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -39,6 +40,9 @@ public class LoginController {
       String api_key = "NCSCXAGNJIBINBEP"; //위에서 받은 api key를 추가
       String api_secret = "L5YVUM1RN2MZUETPNTJQLUOWP13AN3LS";  //위에서 받은 api secret를 추가
 
+      Random rand = new Random();
+      String str = Integer.toString(rand.nextInt(100000) + 1);
+      
       CoolsmsService coolsms = new CoolsmsService(api_key, api_secret);
       //이 부분은 홈페이지에서 받은 자바파일을 추가한다음 그 클래스를 import해야 쓸 수 있는 클래스이다.
       
@@ -48,7 +52,7 @@ public class LoginController {
 
       set.put("from", "01047985025"); 
       // (String)request.getParameter("from")); // 발신번호, jsp에서 전송한 발신번호를 받아 map에 저장한다.
-      set.put("text", "테스트 문자입니다."); 
+      set.put("text", "인증번호는 " + "[" + str + "]" + "입니다."); 
       // (String)request.getParameter("text")); // 문자내용, jsp에서 전송한 문자내용을 받아 map에 저장한다.
       set.put("type", "sms"); // 문자 타입
 
