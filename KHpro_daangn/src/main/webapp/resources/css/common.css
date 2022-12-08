@@ -54,6 +54,21 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 
 .footer-wrap .footer-info .footer-select {margin-left: 0.3rem;}
 
+
+
+/* join & login */
+.main-wrap .join-wrap {width: 500px; margin: 15rem auto 5rem;}
+.main-wrap .join-wrap > h2 {margin-bottom: 2rem; font-size: 3rem; font-weight: 800; color:ff6f0f}
+.main-wrap .join-wrap > input {width: 100%; margin: 1.5rem 0; display: block; padding: 1.3rem 0; border: solid 2px lightgray; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px;}
+.main-wrap .join-wrap > input::placeholder {padding: 0 1rem; color: lightgray;}
+.main-wrap .join-wrap > button {cursor: pointer; width: 100%; margin: 1.5rem 0; padding: 1.3rem 0; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff9e66;}
+.main-wrap .join-wrap > button:hover {background-color: #ff6f0f;}
+.main-wrap .join-wrap > button:active {margin: 1.67rem 0; zoom: 0.95;}
+.main-wrap .join-wrap .policy {display: flex; justify-content: center;}
+.main-wrap .join-wrap .policy > p {margin: 0 0.5rem;}
+
+
+
 /* index */
 .main-wrap {margin: 8.8rem auto 0;}
 .main-wrap .main-content:first-child {position: relative; display: flex; justify-content: center; padding-top: 2.4rem; background-color: #FBF7F2;}
@@ -139,7 +154,7 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .post-wrap .posts .post .post-click .post-content .post-address {margin-bottom: 0.4rem; color: gray; font-size: 1.6rem;}
 .post-wrap .posts .post .post-click .post-content .post-amount {margin-bottom: 0.7rem; font-size: 1.8rem; font-weight: 800;}
 
-article-wrap .article-posts .post .article-click .article-content .article-like {margin-bottom: 0.4rem; color: gray; font-size: 1.6rem; float: left;}
+.article-wrap .article-posts .post .article-click .article-content .article-like {margin-bottom: 0.4rem; color: gray; font-size: 1.6rem; float: left;}
 .article-wrap .article-posts .post .article-click .article-content .article-like:after {content: " ·"}
 .article-wrap .article-posts .post .article-click .article-content .article-chat {color: gray; font-size: 1.6rem;}
 
