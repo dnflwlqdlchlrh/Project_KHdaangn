@@ -127,10 +127,11 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .post-wrap .post-top-wrap {display: flex; align-items: center;}
 .main-wrap .post-wrap .post-top-wrap > h2 {font-size: 2.8rem; margin: 3.75rem 54rem 2.5rem 0;}
 
-.main-wrap .post-wrap .posts {width: 780px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
-.main-wrap .post-wrap .posts .post {width: calc(25% - 44px); margin-right: 220px; margin-bottom: 56px; cursor: pointer;}
-.main-wrap .post-wrap .posts .post .post-click {display: flex;}
-.main-wrap .post-wrap .posts .post .post-click .post-img {width: 100%; border-radius: 12px;}
+/* posts에서 공유해서 쓰기 때문에 앞에 상속관계 쓰지 않음 */
+.posts {width: 780px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.posts .post {width: calc(25% - 44px); margin-right: 220px; margin-bottom: 56px; cursor: pointer;}
+.posts .post .post-click {display: flex;}
+.posts .post .post-click .post-img {width: 100%; border-radius: 12px;}
 /* .post-wrap .posts .post .post-click .post-content .post-title {font-size: 1.4rem;} */
 
 .karrot-app {cursor: pointer; width: 770px; margin: 0 auto; display: flex; align-items: center; border-radius: 10px; background-color: #ff6f0f24}
@@ -146,7 +147,7 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .post-btn > button:hover {cursor: pointer; padding: 0.7rem 1rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff9e66;}
 
 .post-wrap {width: 780px; margin: 0 auto;}
-.post-wrap h1 {font-size: 2.5rem; font-weight: 800;}
+.post-wrap h1 {font-size: 2.3rem; font-weight: 800;}
 .post-wrap h2 {padding: 1rem 0;}
 
 .post-wrap .slide-img > img {width: 100%; text-align: center;}
@@ -155,9 +156,10 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .post-wrap .id-section .id-section-left > h2 {padding: 0; font-weight: 800;}
 
 .post-wrap .title {margin: 3rem 0; display: flex; justify-content: space-between;}
-.post-wrap .title .title-name {color: gray; float: left;}
-.post-wrap .title .title-name:after {content: ' · ';}
-.post-wrap .title .title-date {color: gray;}
+.post-wrap .title .title-left .title-name {color: gray; float: left;}
+.post-wrap .title .title-left .title-name:after {content: ' · ';}
+.post-wrap .title .title-left .title-date {color: gray;}
+.post-wrap .title .title-right {display: flex;}
 
 .post-wrap .info {margin-bottom: 5rem;}
 .post-wrap .info .info-content {font-size: 1.7rem;}
@@ -170,9 +172,10 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .post-wrap .address .naver-map .map-api {text-align: center;}
 .post-wrap .address .address-detail {font-size: 1.7rem;}
 
-.post-modifyBtn > button {cursor: pointer; padding: 1.3rem 1.8rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff6f0f;}
-.post-modifyBtn > button:hover {cursor: pointer; padding: 1.3rem 1.8rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff9e66;}
-
+.post-modifyBtn > button {cursor: pointer; margin-right: 0.2rem; padding: 1.3rem 1.8rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff6f0f;}
+.post-modifyBtn > button:hover {background-color: #ff9e66;}
+.post-deleteBtn > button {cursor: pointer; padding: 1.3rem 1.8rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: indianred;}
+.post-deleteBtn > button:hover {background-color: red;}
 
 .main-wrap .add-h3 {float:left;}
 .main-wrap .choice-gray {color: gray;}

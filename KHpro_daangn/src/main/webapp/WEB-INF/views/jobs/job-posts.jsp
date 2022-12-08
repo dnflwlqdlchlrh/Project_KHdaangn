@@ -45,7 +45,10 @@
 				<!-- 로그인 구현후 session -> not empty 변경 -->
 				<c:if test="${empty sessionScope.loginData}">
 				<div class="post-modifyBtn">
-					<button class="" onclick="location.href='${jobModifyUrl}'">수정</button>
+					<button onclick="location.href='${jobModifyUrl}'">수정</button>
+				</div>
+				<div class="post-deleteBtn">
+					<button onclick="location.href='${jobDelUrl}'">삭제</button>
 				</div>
 				</c:if>
 			</div>

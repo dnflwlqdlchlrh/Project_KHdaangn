@@ -26,4 +26,5 @@
 <c:url var="topKeywords" value="/top_keywords" />
 <c:url var="jobAddUrl" value="jobs/add" />
 <c:url var="jobModifyUrl" value="jobs/modify" />
+<c:url var="jobDelUrl" value="jobs/delete" />
 <c:url var="jobPostsUrl" value="/job-posts" />
