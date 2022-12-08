@@ -70,5 +70,27 @@
 	</insert>
 	
 
+	<update id="updateJobDetail" parameterType="jobDetailDto">
+		UPDATE jobDetail_t
+			SET title = #{title}
+			, payType = #{payType}
+			, pay = #{pay}
+			, companyName = #{companyName}
+			, address = #{address}
+			, addressCode = #{addressCode}
+			, addressName = #{addressName}
+			, week = #{week}
+			, weekNego = #{weekNego}
+			, startTime = #{startTime}
+			, endTime = #{endTime}
+			, timeNego = #{timeNego}
+			, detail = #{detail}
+		WHERE jobDId = #{jobDId}
+	</update>
+	
+	<delete id="deleteData">
+		DELETE FROM jobBase_t
+		 WHERE jobBId = #{jobBId}
+	</delete>
 
 </mapper>

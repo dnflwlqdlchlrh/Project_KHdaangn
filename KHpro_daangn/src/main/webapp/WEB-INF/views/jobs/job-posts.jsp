@@ -16,80 +16,96 @@
 	<!-- //Header -->
 		
 	<!-- Main -->
-	<div class="post-wrap">
-		<div class="slide-img">
-			<c:forEach items="${fileDatas}" var="file">
-				<li>
-					<img src="${pageContext.request.contextPath}/${file.url}/${file.uuidName}">
-				</li>
-			</c:forEach>	
-		</div>
-		<div class="id-section">
-			<div class="id-section-left">
-				<div class="id-img"><img src=""></div>
-				<div class="id-name">${jobInfo.userId}</div>
-				<div class="id-address">${detailInfo.address}</div>
+	<form action="${jobPostsUrl}" method="get" id="jobPost">
+	<!-- <form action="${job-posts}/${jobInfo.jobBId}" method="get">-->
+		<div class="post-wrap">
+			<div class="slide-img">
+				<c:forEach items="${fileDatas}" var="file">
+					<li>
+						<img src="${pageContext.request.contextPath}/${file.url}/${file.uuidName}">
+					</li>
+				</c:forEach>	
 			</div>
-			<div class="id-section-right">
-				<div class="dgree">36.9℃</div>
-				<div class="dgree-level"></div>
-				<div class="icon"></div>
-				<div class="manner-dgree">매너온도</div>
+			<div class="id-section">
+				<div class="id-section-left">
+					<div class="id-img"><img src=""></div>
+					<div class="id-name">${jobInfo.userId}</div>
+					<div class="id-address">${detailInfo.address}</div>
+				</div>
+				<div class="id-section-right">
+					<div class="dgree">36.9℃</div>
+					<div class="dgree-level"></div>
+					<div class="icon"></div>
+					<div class="manner-dgree">매너온도</div>
+				</div>
 			</div>
-		</div>
-		<hr>
-		<div class="title">
-			<div class="title-main">${detailInfo.title}
-			---[부평역]주5일/4시간/130~150만원/홍보/상담/초보 경단가능---</div>
-			<div class="title-companyName">${detailInfo.companyName}</div>
-			<div class="title-date">${varInfo.postDateStr} ---약 1년 전 작성---</div>
-		</div>
-		<div class="info">
-			<div class="info-title">정보</div>
-			<div class="info-content">${detailInfo.payType} ${varInfo.payStr} ---월급 103만원---</div>
-			<div class="info-content" id="address">${detailInfo.address}</div> ---인천 부평구 광장로 4---
-			<div class="info-content" id="addressCode">${detailInfo.addressCode}</div>
-			<div class="info-content">${detailInfo.week} ${detailInfo.weekNego} ---월~금--- </div>
-			<div class="info-content">${detailInfo.startTime}~${detailInfo.endTime} ${jobMapInfo.timeNego}
-			---10:00~16:00 협의---</div>
-		</div>
-		<div class="detail">
-			<div class="detail-title">상세 내용</div>
-			<div class="detail-content">${detailInfo.detail}</div>
-		</div>
-		<div class="address">
-			<div class="naver-map">
-				<!-- Naver Map API -->
-				naver map api
-				<div id="map" style="width:100%;height:350px;"></div>
-				<!-- //Naver Map API -->
-			</div>
-			<div class="address-detail">${detailInfo.address}</div>
-		</div>
-		<div class="recommand">
-		<div>${detailInfo.addressName} 근처 알바</div>
-		<c:forEach items="${jobList}" var="jobList" begin="0" end="3" >
-			<div class="posts">
-				<!--  <a href="/KHdaangn/jobs/job-posts" class="" onClick="">-->
-					<article>
-						<<!-- Post (클릭되는 부분) -->   
-						<div class="post-click" onclick="location.href='${jobList.jobBId}'">
-						
-						<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
-							<img class="post-img" src="${pageContext.request.contextPath}/${jobList.imgObj.url}/${jobList.imgObj.uuidName}">
-							<div class="post-content">
-								<div class="post-title"><c:out value="${jobList.detailObj.title}"/></div>
-								<div class="post-companyName"><c:out value="${jobList.detailObj.companyName}"/></div>
-								<div class="post-address"><c:out value="${jobList.detailObj.address}"/></div>
-								<div class="post-pay"><c:out value="${jobList.detailObj.payType}"/><c:out value="${jobList.detailObj.pay}"/></div>
-							</div>
+			<hr>
+			<div class="title">
+				<div class="title-main">${detailInfo.title}
+				---[부평역]주5일/4시간/130~150만원/홍보/상담/초보 경단가능---</div>
+				<div class="title-companyName">${detailInfo.companyName}</div>
+				<div class="jobBId" >${jobInfo.jobBId}</div>
+				<div class="title-date">${varInfo.postDateStr} ---약 1년 전 작성---</div>
+				<div class="title-right">
+					<c:if test="${empty sessionScope.loginData}">
+						<!-- 로그인 구현 후 not empty 로 변경 하시오. -->
+						<%--c:if test="${not empty sessionScope.loginData}" --%>
+						<div class="post-modifyBtn">
+							<button class="" onclick="location.href='${jobModifyUrl}/${jobInfo.jobBId}'">수정</button>
 						</div>
-					</article>
-				<!-- </a>-->
+						<div class="post-deleteBtn">
+							<button class="" id="delete_btn">삭제</button>
+						</div>
+					</c:if>			
+				</div>
 			</div>
-			</c:forEach>
+			<div class="info">
+				<div class="info-title">정보</div>
+				<div class="info-content">${detailInfo.payType} ${varInfo.payStr} ---월급 103만원---</div>
+				<div class="info-content" id="address">${detailInfo.address}</div> ---인천 부평구 광장로 4---
+				<div class="info-content" id="addressCode">${detailInfo.addressCode}</div>
+				<div class="info-content">${detailInfo.week} ${detailInfo.weekNego} ---월~금--- </div>
+				<div class="info-content">${detailInfo.startTime}~${detailInfo.endTime} ${jobMapInfo.timeNego}
+				---10:00~16:00 협의---</div>
+			</div>
+			<div class="detail">
+				<div class="detail-title">상세 내용</div>
+				<div class="detail-content">${detailInfo.detail}</div>
+			</div>
+			<div class="address">
+				<div class="naver-map">
+					<!-- Naver Map API -->
+					naver map api
+					<div id="map" style="width:100%;height:350px;"></div>
+					<!-- //Naver Map API -->
+				</div>
+				<div class="address-detail">${detailInfo.address}</div>
+			</div>
+			<div class="recommand">
+			<div>${detailInfo.addressName} 근처 알바</div>
+			<c:forEach items="${jobList}" var="jobList" begin="0" end="3" >
+				<div class="posts">
+					<!--  <a href="/KHdaangn/jobs/job-posts" class="" onClick="">-->
+						<article>
+							<<!-- Post (클릭되는 부분) -->   
+							<div class="post-click" onclick="location.href='${jobList.jobBId}'">
+							
+							<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
+								<img class="post-img" src="${pageContext.request.contextPath}/${jobList.imgObj.url}/${jobList.imgObj.uuidName}">
+								<div class="post-content">
+									<div class="post-title"><c:out value="${jobList.detailObj.title}"/></div>
+									<div class="post-companyName"><c:out value="${jobList.detailObj.companyName}"/></div>
+									<div class="post-address"><c:out value="${jobList.detailObj.address}"/></div>
+									<div class="post-pay"><c:out value="${jobList.detailObj.payType}"/><c:out value="${jobList.detailObj.pay}"/></div>
+								</div>
+							</div>
+						</article>
+					<!-- </a>-->
+				</div>
+				</c:forEach>
+			</div>
 		</div>
-	</div>
+	</form>
 	<!-- //Main -->
 	
 	<!-- Footer -->
@@ -143,7 +159,15 @@
 	        map.setCenter(coords);
 	    } 
 	});    
-</script>
 	
+</script>
+<script>
+	
+	$("#delete_btn").on("click", function(e){
+		$("#jobPost").attr("action", "${pageContext.request.contextPath}/jobs/delete/${jobInfo.jobBId}");
+		$("#jobPost").attr("method", "post");
+		$("#jobPost").submit();
+	});
+</script>
 </body>
 </html>

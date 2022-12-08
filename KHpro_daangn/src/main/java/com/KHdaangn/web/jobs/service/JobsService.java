@@ -104,7 +104,7 @@ private static final Logger logger = LoggerFactory.getLogger(JobsService.class);
 		String jobBId = keyTitle + "-" + uuid;
 		jobDto.setJobBId(jobBId);
 		
-		jobDto.setUserId(job.getUserId()); //ptjobDto.setUserId(userDto.getUserId());
+		jobDto.setUserId(job.getUserId()); //jobDto.setUserId(userDto.getUserId());
 		jobDetailDto.setJobDId(jobBId);
 		jobDetailDto.setTitle(jobDetail.getTitle());
 		jobDetailDto.setPayType(jobDetail.getPayType());
@@ -129,4 +129,44 @@ private static final Logger logger = LoggerFactory.getLogger(JobsService.class);
 		return null;
 	}
 	
+
+
+	@Transactional
+	public String modify(HttpSession session, HttpServletRequest request, JobsDetailDTO jobDetail
+			) {
+	
+		JobsDetailDTO jobDetailDto = new JobsDetailDTO();
+
+		jobDetailDto.setJobDId(jobDetail.getJobDId());
+		jobDetailDto.setTitle(jobDetail.getTitle());
+		jobDetailDto.setPayType(jobDetail.getPayType());
+		jobDetailDto.setPay(jobDetail.getPay());
+		jobDetailDto.setCompanyName(jobDetail.getCompanyName());
+		jobDetailDto.setAddress(jobDetail.getAddress());
+		jobDetailDto.setAddressCode(jobDetail.getAddressCode());
+		jobDetailDto.setAddressName(jobDetail.getAddressName());
+		jobDetailDto.setWeek(jobDetail.getWeek());
+		jobDetailDto.setWeekNego(jobDetail.getWeekNego());
+		jobDetailDto.setStartTime(jobDetail.getStartTime());
+		jobDetailDto.setEndTime(jobDetail.getEndTime());
+		jobDetailDto.setTimeNego(jobDetail.getTimeNego());
+		jobDetailDto.setDetail(jobDetail.getDetail());
+		
+		logger.info("detailService1!!!!!!" + jobDetail.getJobDId() + jobDetailDto);
+		
+		boolean jobDetailResult = dao.updateJobDetail(jobDetailDto);
+		
+		System.out.println("detailService2!!!" + jobDetailResult);
+		
+		if(jobDetailResult) {
+			return jobDetail.getJobDId();
+		}
+		return null;
+	}
+	
+	@Transactional
+	public boolean remove(HttpSession session, JobsDTO data) {
+		boolean result = dao.deleteData(data);
+		return result;
+	}
 }

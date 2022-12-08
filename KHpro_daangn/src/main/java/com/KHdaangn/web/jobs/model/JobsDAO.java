@@ -50,4 +50,15 @@ public class JobsDAO {
 		return result == 1? true : false;
 	}
 	
+	public boolean updateJobDetail(JobsDetailDTO data) {
+		int result = 0;
+		result = session.update("jobMapper.updateJobDetail", data);
+		return result == 1? true : false;
+	}
+	
+	public boolean deleteData(JobsDTO data) {
+		int result = session.delete("jobMapper.deleteData", data.getJobBId());
+		return result == 1 ? true : false;
+	}
+	
 }
