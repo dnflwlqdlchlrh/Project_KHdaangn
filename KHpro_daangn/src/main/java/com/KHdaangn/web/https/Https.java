@@ -1,4 +1,4 @@
-package com.KHdaangn.web.Https;
+package com.KHdaangn.web.https;
 
 import java.io.*;
 import java.net.URL;

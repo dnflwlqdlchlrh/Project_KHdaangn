@@ -1,11 +1,13 @@
-package com.KHdaangn.web.coolsms;
+package com.KHdaangn.web.coolsms.service;
 
 import java.util.HashMap;
 import java.util.Properties;
 
 import org.json.simple.JSONObject;
 
-import com.KHdaangn.web.Https.Https;
+import com.KHdaangn.web.https.Https;
+
+
  
 /*
  * Coolsms Class
@@ -13,7 +15,7 @@ import com.KHdaangn.web.Https.Https;
  * v1.1 
  * POST?GET REQUEST
  */
-public class Coolsms extends Https {
+public class CoolsmsService extends Https {
     final String URL = "https://api.coolsms.co.kr";
     private String sms_url = URL + "/sms/1.5/";
     private String senderid_url = URL + "/senderid/1.1/";
@@ -26,7 +28,7 @@ public class Coolsms extends Https {
     /*
      * Set api_key, api_secret
      */
-    public Coolsms(String api_key, String api_secret) {
+    public CoolsmsService(String api_key, String api_secret) {
         this.api_key = api_key;
         this.api_secret = api_secret;
     }

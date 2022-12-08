@@ -18,24 +18,16 @@
 	<div class="main-wrap">
 		<div class="join-wrap">
 			<h2 class="join-title">로그인</h2>
+			<form action="login" method="post">
 			<input class="join-input" name="to" placeholder="휴대폰 번호를 입력해주세요">
-			<button class="join-button" onclick="msg_send();">인증문자 받기</button>
+			<button class="join-button" onclick="sms_send();">인증문자 받기</button>
 			<input class="join-input" placeholder="인증번호를 입력해주세요">
 			<button class="join-button" onclick="login_check();">로그인</button>
 			<hr>
 			<button class="naverLogin">네이버 로그인</button>
+			</form>
 		</div>
 	</div>
-
-	<script>
-		function msg_send(pageName) {
-
-			console.log("문자를 전송합니다.");
-			$("#smsForm").attr("action", pageName + "/login"); //위에 있는 폼태그를 컨트롤러로 전송한다.
-			$("#smsForm").submit();
-		}
-	</script>
-
 	<!-- //Main -->
 
 	<!-- Footer -->
