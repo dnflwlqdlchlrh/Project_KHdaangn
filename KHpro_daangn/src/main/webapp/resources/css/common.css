@@ -127,10 +127,10 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .post-wrap .post-top-wrap {display: flex; align-items: center;}
 .main-wrap .post-wrap .post-top-wrap > h2 {font-size: 2.8rem; margin: 3.75rem 54rem 2.5rem 0;}
 
-.post-wrap .posts {width: 780px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
-.post-wrap .posts .post {width: calc(25% - 44px); margin-right: 220px; margin-bottom: 56px; cursor: pointer;}
-.post-wrap .posts .post .post-click {display: flex;}
-.post-wrap .posts .post .post-click .post-img {width: 100%; border-radius: 12px;}
+.main-wrap .post-wrap .posts {width: 780px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.main-wrap .post-wrap .posts .post {width: calc(25% - 44px); margin-right: 220px; margin-bottom: 56px; cursor: pointer;}
+.main-wrap .post-wrap .posts .post .post-click {display: flex;}
+.main-wrap .post-wrap .posts .post .post-click .post-img {width: 100%; border-radius: 12px;}
 /* .post-wrap .posts .post .post-click .post-content .post-title {font-size: 1.4rem;} */
 
 .karrot-app {cursor: pointer; width: 770px; margin: 0 auto; display: flex; align-items: center; border-radius: 10px; background-color: #ff6f0f24}
@@ -144,7 +144,6 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .post-btn {float:right; margin-top: 2.2rem;}
 .post-btn > button {cursor: pointer; padding: 0.7rem 1rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff6f0f;}
 .post-btn > button:hover {cursor: pointer; padding: 0.7rem 1rem; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff9e66;}
-
 
 .post-wrap {width: 780px; margin: 0 auto;}
 .post-wrap h1 {font-size: 2.5rem; font-weight: 800;}
@@ -179,3 +178,30 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .choice-gray {color: gray;}
 .main-wrap .add-gray {color: gray;}
 
+/* add(게시물 추가 페이지) */
+.main-wrap .posting-wrap {width: 500px; margin: 15rem auto 0;}
+.main-wrap .posting-wrap > h1 {margin: 3rem 0;}
+.main-wrap .posting-wrap > p {color: gray;}
+.main-wrap .posting-wrap h3 {margin: 2.4rem 0 0.5rem 0.3rem; font-size: 1.8rem;}
+.main-wrap .posting-wrap input[type="text"] {width: 100%; padding: 1.3rem; border: solid 1px lightgray; border-radius: 4px;}
+.main-wrap .posting-wrap input[type="text"]::placeholder {font-size: 1.7rem; color: lightgray;}
+.main-wrap .posting-wrap .add-photo {margin: 2rem 0 4rem;}
+.main-wrap .posting-wrap .add-photo > p {margin: 0.3rem 0; color: gray;}
+.main-wrap .posting-wrap .add-photo .addPhotoIcon {cursor: pointer; width: 3rem; margin: 1rem 0; padding: 0 2rem; color: white; font-size: 5rem; font-weight: 800; border: solid 1px lightgray; border-radius: 6px; background-color: lightgray;}
+
+.main-wrap .posting-wrap .add-info .info-wrap {margin-bottom: 1rem; display: flex; align-items: center;}
+.main-wrap .posting-wrap .add-info .info-wrap > select {padding: 1.2rem; margin-right: 1rem; border: solid lightgray 1px; border-radius: 4px;}
+
+.main-wrap .posting-wrap .add-week .week-btn {text-align: center;}
+.main-wrap .posting-wrap .add-week .week-btn > button {cursor: pointer; margin: 1rem 0.4rem; padding: 1rem 1.2rem; border: solid lightgray 1px; border-radius: 50px; font-size: 1.6rem; font-weight: 500; background-color: white;}
+.main-wrap .posting-wrap .add-week .week-btn > button:active {cursor: pointer; margin: 1rem 0.4rem; padding: 1rem 1.2rem; border: solid black 1px; border-radius: 50px; font-size: 1.6rem; font-weight: 500; color: white; background-color: black;}
+
+.main-wrap .posting-wrap .add-time .time-wrap {display: flex; align-items: center;}
+.main-wrap .posting-wrap .add-time .time-wrap > select {padding: 1.2rem 9rem; margin-right: 1rem; border: solid lightgray 1px; border-radius: 4px;}
+.main-wrap .posting-wrap .add-time .time-wrap > p {font-size: 2rem; margin-right: 0.9rem;}
+.main-wrap .posting-wrap .add-time .nego-wrap {margin: 0.2rem 0 0 0rem; display: flex; align-items: center;}
+.main-wrap .posting-wrap .add-time .nego-wrap > p {font-size: 1.5rem;}
+.main-wrap .posting-wrap .add-time .nego-wrap > input[type="checkbox"] {zoom: 1.5; border-radius: 4px;}
+
+.main-wrap .posting-wrap > button {cursor: pointer; width: 100%; margin: 2rem 0 12rem; padding: 1.3rem 0; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff6f0f;}
+.main-wrap .posting-wrap > button:hover {background-color: #ff9e66;}
