@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jobMapper">
+	 
+	<resultMap type="jobDto" id="jobListMap">
+		<id column="jobBId" property="jobBId"></id>
+		<result column="userId" property="userId"></result>
+		<result column="postDate" property="postDate"></result>
+		<association property="detailObj" javaType="jobDetailDto">
+			<result column="title" property="title"></result>
+			<result column="payType" property="payType"></result>
+			<result column="pay" property="pay"></result>
+			<result column="companyName" property="companyName"></result>
+			<result column="address" property="address"></result>
+			<result column="addressCode" property="addressCode"></result>
+			<result column="addressName" property="addressName"></result>
+			<result column="week" property="week"></result>
+			<result column="weekNego" property="weekNego"></result>	
+			<result column="startTime" property="startTime"></result>
+			<result column="endTime" property="endTime"></result>
+			<result column="timeNego" property="timeNego"></result>
+			<result column="detail" property="detail"></result>
+		</association>
+		<association property="imgObj" javaType="jobUploadDto">
+			<id column="jobUKey" property="jobUKey"/>
+			<result column="UUIDNAME" property="uuidName" />
+			<result column="URL" property="url"/>
+		</association>
+	</resultMap>
+
+	<select id="selectList" resultMap="jobListMap">
+		SELECT *
+		FROM jobBase_t B
+		JOIN jobDetail_t D
+			ON B.jobBId = D.jobDId
+		JOIN jobImage_t I
+			ON B.jobBId = I.jobUId
+		ORDER BY postDate DESC
+	</select>
+	
+	<select id="selectJobInfo" resultType="jobDto">
+		SELECT * 
+		FROM jobBase_t
+		WHERE jobBId = #{jobBId}
+	</select>
+	<select id="selectJobDetailInfo" resultType="jobDetailDto">
+		SELECT *
+		FROM jobDetail_t
+		WHERE jobDId = #{jobBId}
+	</select>
+	<select id="selectJobOtherInfo" resultMap="jobListMap">
+		SELECT *
+		FROM jobBase_t B
+		JOIN jobDetail_t D
+			ON B.jobBId = D.jobDId
+		JOIN jobImage_t I
+			ON B.jobBId = I.jobUId
+		WHERE addressCode = #{addressCode}
+		ORDER BY postDate DESC
+	</select>
+	
+	<insert id="insertJob" parameterType="jobDto">
+		INSERT INTO jobBase_t(jobBId, userId, postDate)
+			VALUES (#{jobBId}, #{userId}, SYSDATE)
+	</insert>
+	<insert id="insertJobDetail" parameterType="jobDetailDto">
+		INSERT INTO jobDetail_t(jobDId, title, payType, pay, companyName, address, addressCode, addressName, week, weekNego, startTime, endTime, timeNego, detail)
+			VALUES (#{jobDId}, #{title}, #{payType}, #{pay}, #{companyName}, #{address}, #{addressCode}, #{addressName}, #{week}, #{weekNego}, #{startTime}, #{endTime}, #{timeNego}, #{detail})
+	</insert>
+	
+
+	<update id="updateJobDetail" parameterType="jobDetailDto">
+		UPDATE jobDetail_t
+			SET title = #{title}
+			, payType = #{payType}
+			, pay = #{pay}
+			, companyName = #{companyName}
+			, address = #{address}
+			, addressCode = #{addressCode}
+			, addressName = #{addressName}
+			, week = #{week}
+			, weekNego = #{weekNego}
+			, startTime = #{startTime}
+			, endTime = #{endTime}
+			, timeNego = #{timeNego}
+			, detail = #{detail}
+		WHERE jobDId = #{jobDId}
+	</update>
+	
+	<delete id="deleteData">
+		DELETE FROM jobBase_t
+		 WHERE jobBId = #{jobBId}
+	</delete>
+
+</mapper>
