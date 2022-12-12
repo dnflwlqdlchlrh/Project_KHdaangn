@@ -65,17 +65,10 @@ public class JobsController {
 		return "jobs/jobs";
 	}
 	
-	// 알바 게시물 페이지 (merge 작업후 삭제해도 됨)
+	// 임시 페이지 (merge 작업 완료후 삭제해도 됨)
 	@RequestMapping(value = "/job-posts", method = RequestMethod.GET)
 	public String jobPosts(Locale locale, Model model) {
-		logger.info("job-posts", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		String formattedDate = dateFormat.format(date);
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "jobs/job-posts";
+		return "jobs/job-posts2";
 	}
 	
 	// 알바 게시물 페이지

@@ -207,6 +207,8 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .choice-gray {color: gray;}
 .main-wrap .add-gray {color: gray;}
 
+
+
 /* add(게시물 추가 페이지) */
 .main-wrap .posting-wrap {width: 500px; margin: 15rem auto 0;}
 .main-wrap .posting-wrap > h1 {margin: 3rem 0;}
@@ -222,15 +224,24 @@ address, table, thead, tbody, tfoot, tr, td, caption {margin: 0; padding: 0;}
 .main-wrap .posting-wrap .add-info .info-wrap > select {padding: 1.2rem; margin-right: 1rem; border: solid lightgray 1px; border-radius: 4px;}
 
 .main-wrap .posting-wrap .add-week .week-btn {text-align: center;}
-.main-wrap .posting-wrap .add-week .week-btn > button {cursor: pointer; margin: 1rem 0.4rem; padding: 1rem 1.2rem; border: solid lightgray 1px; border-radius: 50px; font-size: 1.6rem; font-weight: 500; background-color: white;}
-.main-wrap .posting-wrap .add-week .week-btn > button:active {cursor: pointer; margin: 1rem 0.4rem; padding: 1rem 1.2rem; border: solid black 1px; border-radius: 50px; font-size: 1.6rem; font-weight: 500; color: white; background-color: black;}
+.main-wrap .posting-wrap .add-week .week-btn > input {cursor: pointer; margin: 1rem 0.4rem; padding: 1rem 1.2rem; border: solid lightgray 1px; border-radius: 50px; font-size: 1.6rem; font-weight: 500; background-color: white;}
+.main-wrap .posting-wrap .add-week .week-btn > input:active {cursor: pointer; margin: 1rem 0.4rem; padding: 1rem 1.2rem; border: solid black 1px; border-radius: 50px; font-size: 1.6rem; font-weight: 500; color: white; background-color: black;}
 
 .main-wrap .posting-wrap .add-time .time-wrap {display: flex; align-items: center;}
 .main-wrap .posting-wrap .add-time .time-wrap > select {padding: 1.2rem 9rem; margin-right: 1rem; border: solid lightgray 1px; border-radius: 4px;}
 .main-wrap .posting-wrap .add-time .time-wrap > p {font-size: 2rem; margin-right: 0.9rem;}
-.main-wrap .posting-wrap .add-time .nego-wrap {margin: 0.2rem 0 0 0rem; display: flex; align-items: center;}
-.main-wrap .posting-wrap .add-time .nego-wrap > p {font-size: 1.5rem;}
-.main-wrap .posting-wrap .add-time .nego-wrap > input[type="checkbox"] {zoom: 1.5; border-radius: 4px;}
+.main-wrap .posting-wrap .nego-wrap {margin: 0.2rem 0 0 0rem; display: flex; align-items: center;}
+.main-wrap .posting-wrap .nego-wrap > p {font-size: 1.5rem;}
+.main-wrap .posting-wrap .nego-wrap > input[type="checkbox"] {zoom: 1.5; border-radius: 4px;}
+
+.main-wrap .posting-wrap .add-detail > input {padding-bottom: 14rem;}
 
 .main-wrap .posting-wrap > button {cursor: pointer; width: 100%; margin: 2rem 0 12rem; padding: 1.3rem 0; border: none; color: #fff; font-size: 1.5rem; font-weight: 700; border-radius: 6px; background-color: #ff6f0f;}
 .main-wrap .posting-wrap > button:hover {background-color: #ff9e66;}
+
+
+
+
+/* 임시 데이터용 CSS */
+.main-wrap .posting-wrap .temp-wrap {padding: 0.5rem 1rem 3rem; border-radius: 4px; background-color: #f1f1f1;}
+.main-wrap .posting-wrap .temp-wrap > h3 {color: gray;}

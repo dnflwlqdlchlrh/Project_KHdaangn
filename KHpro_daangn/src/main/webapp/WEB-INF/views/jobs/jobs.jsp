@@ -45,13 +45,15 @@
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
 						<!-- Post (클릭되는 부분) -->
-						<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobsList.title}'">
-							<img class="post-img" src="${pageContext.request.contextPath}${jobsList.imgObj.url}/${jobPostsList.imgObj.uuidName}">
+						<div class="post-click" onclick="location.href='${pageContext.request.contextPath}/${jobPostsUrl}/${jobList.jobBId}'">
+							
+							<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
+							<img class="post-img" src="${pageContext.request.contextPath}/${jobsList.imgObj.url}/${jobList.imgObj.uuidName}">
 							<div class="post-content">
-								<div class="post-title"><c:out value="${jobsList.title}"/></div>
-								<div class="post-id"><c:out value="${jobsList.id}"/></div>
-								<div class="post-address"><c:out value="${jobsList.address}"/></div>
-								<div class="post-amount"><c:out value="${jobsList.amount}"/></div>
+								<div class="post-title"><c:out value="${jobsList.detailObj.title}"/></div>
+								<div class="post-id"><c:out value="${jobsList.detailObj.companyName}"/></div>
+								<div class="post-address"><c:out value="${jobsList.detailObj.address}"/></div>
+								<div class="post-amount"><c:out value="${jobsList.detailObj.payType}"/></div>
 							</div>
 						</div>
 						<!-- //Post -->
