@@ -7,11 +7,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.net.URLEncoder;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -61,6 +63,19 @@ public class JobsController {
 		model.addAttribute("jobList", jobDatas);
 		logger.info("jobsDatas={}", jobDatas);
 		return "jobs/jobs";
+	}
+	
+	// 알바 게시물 페이지 (merge 작업후 삭제해도 됨)
+	@RequestMapping(value = "/job-posts", method = RequestMethod.GET)
+	public String jobPosts(Locale locale, Model model) {
+		logger.info("job-posts", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		String formattedDate = dateFormat.format(date);
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "jobs/job-posts";
 	}
 	
 	// 알바 게시물 페이지
