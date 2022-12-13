@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>우리동네에서 찾는 당근알바</title>
+	<title>${detailInfo.title} - ${detailInfo.addressName} | 우리동네에서 찾는 당근알바</title>
 	<%@ include file="../module/head.jsp" %>
 </head>
 <body>
@@ -42,10 +42,10 @@
 				<h3>정보</h3>
 				<div class="info-wrap">
 					<select name="payType">
-						<option value="hour">시급</option>
-						<option value="day">일급</option>
-						<option value="month" selected>월급</option>
-						<option value="one">건당급</option>
+						<option value="시급">시급</option>
+						<option value="일급">일급</option>
+						<option value="월급" selected>월급</option>
+						<option value="건당급">건당급</option>
 					</select>
 					<input type="text" name="pay" placeholder="9,160" value="${jobAdd.pay}" onKeyUp="this.value=this.value.replace(/[^0-9]/g,'')" >
 					<p>원</p>

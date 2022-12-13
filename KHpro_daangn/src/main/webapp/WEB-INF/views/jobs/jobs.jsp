@@ -30,7 +30,7 @@
 		
 		<div class="post-wrap">
 			<div class="post-top-wrap">
-				<h2 class="">인기 당근알바</h2>
+				<h2>인기 당근알바</h2>
 				<c:if test="${empty sessionScope.loginData}">
 				<!-- 로그인 구현 후 not empty 로 변경 하시오. -->
 				<%--c:if test="${not empty sessionScope.loginData}" --%>
@@ -40,23 +40,19 @@
 				</c:if>
 			</div>
 			
-			<c:forEach items="${jobsList}" var="jobsList">
-			<!-- 게시물 갯수 제한 구현해야함 -->
+			<c:forEach items="${jobsList}" var="jobsList" begin="0" end="9">
 				<div class="post">
 					<form action="${jobPostsUrl}" method="get">
-						<!-- Post (클릭되는 부분) -->
-						<div class="post-click" onclick="location.href='${pageContext.request.contextPath}/${jobPostsUrl}/${jobList.jobBId}'">
-							
-							<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
-							<img class="post-img" src="${pageContext.request.contextPath}/${jobsList.imgObj.url}/${jobList.imgObj.uuidName}">
-							<div class="post-content">
-								<div class="post-title"><c:out value="${jobsList.detailObj.title}"/></div>
-								<div class="post-id"><c:out value="${jobsList.detailObj.companyName}"/></div>
-								<div class="post-address"><c:out value="${jobsList.detailObj.address}"/></div>
-								<div class="post-amount"><c:out value="${jobsList.detailObj.payType}"/></div>
-							</div>
+					<div class="post-click" onclick="location.href='${jobPostsUrl}/${jobList.jobBId}'">
+						<!-- c:if태그로 이미지가 존재할때와 없을때를 구분해서 없을때는 패키지에 직접 저장한 이미지 사용해야 함 -->
+						<img class="post-img" src="${pageContext.request.contextPath}/${jobsList.imgObj.url}/${jobList.imgObj.uuidName}">
+						<div class="post-content">
+							<div class="post-title"><c:out value="${jobsList.detailObj.title}"/></div>
+							<div class="post-id"><c:out value="${jobsList.detailObj.companyName}"/></div>
+							<div class="post-address"><c:out value="${jobsList.detailObj.address}"/></div>
+							<div class="post-amount"><c:out value="${jobsList.detailObj.payType}"/><c:out value="${jobList.detailObj.pay}"/></div>
 						</div>
-						<!-- //Post -->
+					</div>
 					</form>
 				</div>
 			</c:forEach>

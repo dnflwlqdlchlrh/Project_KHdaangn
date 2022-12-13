@@ -140,7 +140,7 @@ public class JobsController {
 	}
 	
 	//알바 게시물 수정 페이지
-	@GetMapping(value="/modify/{jobBId}") //
+	@GetMapping(value="jobs/modify/{jobBId}") //
 	public String modify(Model model, HttpSession session
 			, @PathVariable String jobBId) throws Exception {
 		
