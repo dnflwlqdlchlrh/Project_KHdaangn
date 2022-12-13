@@ -159,7 +159,7 @@ public class JobsController {
 		return "jobs/modify";
 	}
 	
-	@PostMapping(value = "/modify/{jobBId}")
+	@PostMapping(value = "jobs/modify/{jobBId}")
 	public String modify(Model model, HttpSession session, HttpServletRequest request, HttpServletResponse response
 			, @ModelAttribute JobsDTO jobsDto, @ModelAttribute JobsDetailDTO jobsDetailDto 
 			//, @SessionAttribute(name="loginData", required=true) AccountDTO accountDto
