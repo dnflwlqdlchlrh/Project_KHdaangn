@@ -51,7 +51,7 @@
 						<!-- 로그인 구현 후 not empty 로 변경 하시오. -->
 						<%--c:if test="${not empty sessionScope.loginData}" --%>
 						<div class="post-modifyBtn">
-							<button class="" onclick="location.href='${jobModifyUrl}/${jobInfo.jobBId}'">수정</button>
+							<button class="" id="modify_btn">수정</button>
 						</div>
 						<div class="post-deleteBtn">
 							<button class="" id="delete_btn">삭제</button>
@@ -121,6 +121,7 @@
 <!-- 아래에 키값 넣고 사용(localhost8080을 이미 사용중이라 안되는듯) -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a743795c413a66f188d58c0f531e9f3b&libraries=services"></script>
 <script>
+
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	    mapOption = {
 	        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -162,12 +163,19 @@
 	
 </script>
 <script>
+	$("#modify_btn").on("click", function(e){
+		$("#jobPost").attr("action", "${pageContext.request.contextPath}/${jobModifyUrl}/${jobInfo.jobBId}");
+		$("#jobPost").attr("method", "get");
+		$("#jobPost").submit();
+	});
 	
 	$("#delete_btn").on("click", function(e){
-		$("#jobPost").attr("action", "${pageContext.request.contextPath}/jobs/delete/${jobInfo.jobBId}");
+		$("#jobPost").attr("action", "${pageContext.request.contextPath}/${jobDeleteUrl}/${jobInfo.jobBId}");
 		$("#jobPost").attr("method", "post");
 		$("#jobPost").submit();
 	});
+
 </script>
 </body>
 </html>
+
